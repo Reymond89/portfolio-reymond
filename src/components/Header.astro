@@ -11,15 +11,19 @@
 
       <ul class="flex flex-col justify-center items-center gap-8 sm:flex sm:flex-row sm:text-black dark:sm:text-white sm:gap-x-7 sm:opacity-80 md:gap-x-12">
       
-        <li><a class="hover:text-orange-700 text-lg cursor-pointer transition-all ease-in duration-200" href="#">Experiencia</a></li>
-        <li><a class="hover:text-orange-700 text-lg cursor-pointer transition-all ease-in duration-200" href="#">sobre mi</a></li>
-        <li><a class="hover:text-orange-700 text-lg cursor-pointer transition-all ease-in duration-200" href="#">proyectos</a></li>
-        <li><a class="hover:text-orange-700 text-lg cursor-pointer transition-all ease-in duration-200" href="#">Contacto</a></li>
+        <li><a class="hover:text-sky-400 text-lg cursor-pointer transition-all ease-in duration-200" href="#">Experiencia</a></li>
+        <li><a class="hover:text-sky-400 text-lg cursor-pointer transition-all ease-in duration-200" href="#">sobre mi</a></li>
+        <li><a class="hover:text-sky-400 text-lg cursor-pointer transition-all ease-in duration-200" href="#">proyectos</a></li>
+        <li><a class="hover:text-sky-400 text-lg cursor-pointer transition-all ease-in duration-200" href="#">Contacto</a></li>
 
       </ul>
     </div>
     <div id="lightMode" class="cursor-pointer  text-black dark:text-white transition-all ease-in duration-500"> 
-        <svg width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+
+        <svg id="moonMode" width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+
+        <svg id="sunMode" class="cursor-pointer hidden text-black dark:text-white transition-all ease-in duration-500" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+
     </div>
     
     <svg id="menu" class="cursor-pointer text-black dark:text-white relative z-10 sm:hidden" width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>  
@@ -32,6 +36,8 @@
   const light = document.getElementById('lightMode')
   const modeHtml = document.getElementById('modeHtml')
   const bodyBackground = document.getElementById('bodyBg')
+  const sunMode = document.getElementById('sunMode');
+  const moonMode = document.getElementById('moonMode');
   
   menu.addEventListener('click', ()=>{
     menuList.classList.toggle('top-0');
@@ -45,7 +51,9 @@
   
   light.addEventListener('click', ()=>{
     modeHtml.classList.toggle('dark')
-   
+    moonMode.classList.toggle('hidden')
+    sunMode.classList.toggle('hidden')
+  
   })  
  
 </script>
