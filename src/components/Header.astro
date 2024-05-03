@@ -4,7 +4,7 @@
 
 <header class="relative flex justify-between items-center max-w-7xl m-auto py-7 px-5 xl:px-0">
     <div class="cursor-pointer dark:text-white text-black flex items-center">
-      <svg  width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rocket"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+      <svg class="hover:scale-150 hover:origin-bottom hover:-rotate-12 transition-all ease-in duration-500" width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rocket"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
       <p class="text-lg font-semibold tracking-wide">Astro</p>
     </div>
     <div id="menuList" class="transition-all ease-in duration-700 overflow-hidden w-full h-[50vh] absolute z-10 left-0 -top-[600px] backdrop-blur-md bg-white/30 dark:text-white font-semibold flex justify-center items-center sm:backdrop-blur-none sm:bg-transparent sm:transition-none sm:sticky sm:h-auto sm:flex">
@@ -22,11 +22,14 @@
 
         <svg id="moonMode" width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
 
-        <svg id="sunMode" class="cursor-pointer hidden text-black dark:text-white transition-all ease-in duration-500" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+        <svg id="sunMode" class="cursor-pointer hidden text-black hover:rotate-90 dark:text-white transition-all ease-in duration-500" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
 
     </div>
-    
-    <svg id="menu" class="cursor-pointer text-black dark:text-white relative z-10 sm:hidden" width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>  
+    <div id="menu">
+      <svg id="menuHamburguer" class="cursor-pointer text-black dark:text-white relative z-10 sm:hidden transition-all ease-out duration-500" width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+  
+      <svg id="menuDelete" class="hidden cursor-pointer text-black dark:text-white relative z-10 sm:hidden transition-all ease-out duration-500 hover:rotate-180 dark:hover:text-sky-500"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>  
+    </div>
 </header>
 
 <script>
@@ -38,8 +41,12 @@
   const bodyBackground = document.getElementById('bodyBg')
   const sunMode = document.getElementById('sunMode');
   const moonMode = document.getElementById('moonMode');
+  const menuDelete = document.getElementById('menuDelete');
+  const menuHamburguer = document.getElementById('menuHamburguer');
   
   menu.addEventListener('click', ()=>{
+    menuDelete.classList.toggle('hidden')
+    menuHamburguer.classList.toggle('hidden')
     menuList.classList.toggle('top-0');
   })
   
